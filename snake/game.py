@@ -27,7 +27,7 @@ def play():
     snakeX = 50
     snakeY = 50
     snakeSize = 25
-    speed = 10
+    speed = 5
     snakeLength = 1
     snakeList = []
     # food
@@ -74,6 +74,7 @@ def play():
                 snakeY = -2
             if isEaten(snakeX, snakeY, foodX, foodY):
                 score += 1
+                speed += 0.5
                 snakeLength += 5
                 foodX = random.randint(0, 850)
                 foodY = random.randint(0, 550)
